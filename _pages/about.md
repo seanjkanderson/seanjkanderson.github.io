@@ -12,13 +12,7 @@ header:
 ---
 How do I pass the time?
 ------
-I graduated with a B.S. in energy engineering from U.C. Berkeley. I specialized in controls engineering but also enjoy
-heat transfer and fluid mechanics. I'm always trying to learn more whether it's about differential dynamic programming,
-a blank spot on the far reaches of a map, or the people around me. My current interests include:
-* Stochastic optimization and control
-* Quantitative finance
-* iLQR and DDP
-* Active estimation
+I graduated with a B.S. in energy engineering from U.C. Berkeley. I got my M.S. in Electrical and Computer Engineering with an emphasis in controls and machine learning at U.C. Santa Barbara. Now I'm working on a PhD in controls and optimization.
 
 ![picture alt](/images/wonder_valley.jpg)
 
@@ -30,8 +24,7 @@ the natural world, understand how humans change the face of the planet, and expl
 ...still growing up
 ------
 I finished my B.S. in May 2018. The day after graduation I went on a bikepacking trip in China. When I got back I lived on the road in the western United States 
-for a few months. I like to nerd out and play big in the outdoors. Now, I'm back in Berkeley, California, working at a
-startup, New Sun Road.
+for a few months. I like to nerd out and play big in the outdoors. I worked at a startup, New Sun Road, for two years working on datascience, controls, and software engineering. Now I'm back in school, dreaming of big expeditions.
 
 Reading
 ------
@@ -41,12 +34,3 @@ __Memorable books__:
 * Silent Spring - Rachel Carson
 * The Monkey Wrench Gang - Edward Abbey
 * Beyond the Mountain - Steve House
-
-__Current Books__:
-* The Boys in the Boat - Daniel James Brown
-* Life of a Street Addict - Jim Cramer
-
-What's next?
-------
-I am planning to attend graduate school in the fall of 2020. I'm passing my time by focusing on topics related to 
-control theory, state estimation, and numerical methods for computing.

@@ -1,0 +1,2440 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://yalmip.github.io/ -->
+<html lang="en" class=" js "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./YALMIP_files/MathJax.js" type="text/javascript"></script>
+
+  
+    
+
+
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>YALMIP</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="YALMIP">
+<meta property="og:title" content="YALMIP">
+
+
+  <link rel="canonical" href="https://yalmip.github.io/">
+  <meta property="og:url" content="https://yalmip.github.io/">
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="https://yalmip.github.io/images/forest.jpg">
+
+
+
+
+
+
+  <link rel="next" href="https://yalmip.github.io/page2/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Johan Löfberg",
+      "url" : "https://yalmip.github.io",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://yalmip.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="YALMIP Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="./YALMIP_files/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  <style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+  <body style="margin-bottom: 181px;"><div id="MathJax_Message" style="display: none;"></div>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button class="hidden" count="0"><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="https://yalmip.github.io/">YALMIP</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://yalmip.github.io/download">Download</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://yalmip.github.io/search">Search</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://yalmip.github.io/tutorials">Tutorials</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://yalmip.github.io/examples">Examples</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://yalmip.github.io/allcommands">Commands</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://yalmip.github.io/allsolvers">Solvers</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://yalmip.github.io/tags">Index</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://yalmip.github.io/faq">FAQ</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://yalmip.github.io/reference">References</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://groups.google.com/forum/#!forum/yalmip">Forum</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+  
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay" style=" background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(&#39;https://yalmip.github.io/images/forest.jpg&#39;);">
+  
+    <div class="wrapper">
+      <h1 class="page__title" itemprop="headline">
+        
+          YALMIP
+        
+      </h1>
+      
+      
+      
+        <p><a href="https://yalmip.github.io/download" class="btn btn--light-outline btn--large">Download</a></p>
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+<div id="main" role="main">
+  
+  
+
+  
+  <div class="archive">
+    
+    
+
+<!-- <h3 class="archive__subtitle">Recent Posts</h3>-->
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/sparseoptimizer" rel="permalink">Working with sparse parameterizations in optimizer
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-10-12T00:00:00+00:00">October 12, 2018</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Be careful with unnecessary symbolic overhead
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20181012" rel="permalink">New release R20181012
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-10-12T00:00:00+00:00">October 12, 2018</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Various small improvements
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20180926" rel="permalink">New release R20180926
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-09-26T00:00:00+00:00">September 26, 2018</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Revised MISDP solvers
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/equalityinuncertainty" rel="permalink">Equalities with uncertainty
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-09-11T00:00:00+00:00">September 11, 2018</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">= ≠ ==. Horse purchases and warehouse logistics
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20180817" rel="permalink">New release R20180817
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-08-17T00:00:00+00:00">August 17, 2018</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Minor fixes and improvements
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20180612" rel="permalink">New release R20180612
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-06-12T00:00:00+00:00">June 12, 2018</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Minor fixes and improvements
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/parameterizeduncertainty" rel="permalink">Parameterizing the uncertainty set in robust optimization
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-04-25T00:00:00+00:00">April 25, 2018</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Uncertainty descriptions can only involve uncertain variables, so how can they be parameterized?
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20180413" rel="permalink">New release R20180413
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-04-13T00:00:00+00:00">April 13, 2018</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Minor fixes and improvements
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/polynomialdesign" rel="permalink">Designing polynomials
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-16T00:00:00+00:00">February 16, 2018</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Working with polynomials, function values, derivatives, integrals and their properties
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20180209" rel="permalink">New release R20180209
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-09T00:00:00+00:00">February 09, 2018</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Minor fixes and improvements
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/multiobjective" rel="permalink">Multi-objective problems in YALMIP
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-11-24T00:00:00+00:00">November 24, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">How do I create a cheap Ferrari?
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20171121" rel="permalink">New release R20171121
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-11-21T00:00:00+00:00">November 21, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Minor fixes and improvements
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20171018" rel="permalink">New release R20171018
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-10-18T00:00:00+00:00">October 18, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Important patch
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/modellingif" rel="permalink">Modelling if-else-end statements
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-10-17T00:00:00+00:00">October 17, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Untangle that messy expression
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/slowmilp" rel="permalink">Why is my MILP not finishing
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-10-08T00:00:00+00:00">October 08, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">How bad is exponential complexity?
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/debuggingunbounded/" rel="permalink">Debugging unbounded models
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-09-21T00:00:00+00:00">September 21, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Where to start?
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20170921" rel="permalink">New release R20170921
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-09-21T00:00:00+00:00">September 21, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Removed bug crashing bonmin and ipopt
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/interp1qp" rel="permalink">Nonconvex QP via piecewise affine models
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-09-16T00:00:00+00:00">September 16, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Convenient generation of approximations
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20170915b" rel="permalink">New release R20170915
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-09-15T00:00:00+00:00">September 15, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Performance fix and extended interp1
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/cutsdpsolver" rel="permalink">The CUTSDP solver explained
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-09-01T00:00:00+00:00">September 01, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">A little known solver
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/Initials" rel="permalink">Supplying initial guesses to solvers
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-08-25T00:00:00+00:00">August 25, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Give your solver a hint
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/Initials" rel="permalink">Supplying initial guesses to warm-start solvers
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-08-25T00:00:00+00:00">August 25, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Give your solver a hint
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20170818" rel="permalink">New release R20170818
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-08-18T00:00:00+00:00">August 18, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Improvements in bmibnb, interp1 and sdisplay
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/Extracting" rel="permalink">Extracting low-level data from solvers
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-08-11T00:00:00+00:00">August 11, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Extracting inputs and outputs from solvers
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/longshort/" rel="permalink">Nonconvex long-short constraints - 7 ways to count
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-06-27T00:00:00+00:00">June 27, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">There is more than one way to skin a cat
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20170626" rel="permalink">New release R20170626
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-06-26T00:00:00+00:00">June 26, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Some more fixes…
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20170624" rel="permalink">New release R20170624
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-06-24T00:00:00+00:00">June 24, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Update for cplex bug
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20170622" rel="permalink">New release R20170622
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-06-22T00:00:00+00:00">June 22, 2017</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">New solvers and minor patches
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20160930" rel="permalink">New release R20160930
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-09-30T00:00:00+00:00">September 30, 2016</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Both patches and new features
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/randomextension/" rel="permalink">Sample-based robust optimization
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-09-28T00:00:00+00:00">September 28, 2016</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Unintended consequences of an improved optimizer framework
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/optimizerupdates/" rel="permalink">Extensions on the optimizer
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-09-28T00:00:00+00:00">September 28, 2016</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Slice’n dice your problems
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/cplexcrash/" rel="permalink">MATLAB 2016 + CPLEX crash
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-09-23T00:00:00+00:00">September 23, 2016</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Boom!
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/R20160923" rel="permalink">New release R20160923
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-09-23T00:00:00+00:00">September 23, 2016</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">It’s been a while…
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/debugginginfeasible/" rel="permalink">Debugging infeasible models
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-09-22T00:00:00+00:00">September 22, 2016</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Where to start?
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/2016-09-17-failedconvexity/" rel="permalink">
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime=""></time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/Octave-support/" rel="permalink">Octave support in YALMIP
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2014-04-16T00:00:00+00:00">April 16, 2014</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">MATLAB no longer required! Recommended though.
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/Worst-case-inf-norm/" rel="permalink">Worst-case norms of matrices
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2014-02-08T00:00:00+00:00">February 08, 2014</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Hard? Let’s try anyway.
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/YALMIP-and-simulink/" rel="permalink">YALMIP and Simulink
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2013-06-27T00:00:00+00:00">June 27, 2013</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Using YALMIP objects and code in Simulink models, easy or fast, your choice.
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/Unit-commitment-example/" rel="permalink">Unit commitment example - logic and integer programming
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2013-01-30T00:00:00+00:00">January 30, 2013</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">A common application of integer programming is the unit commitment problem in power generation, i.e., scheduling of set of power plants in order to meet a cu...</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/Nonconvex-quadratic-programming/" rel="permalink">Nonconvex quadratic programming
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-08-31T00:00:00+00:00">August 31, 2011</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Common question: how can I solve a nonconvex QP using SeDuMi? Weird question, but interesting answer.
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/Strictly-feasible-sum-of-squares/" rel="permalink">Strictly feasible sum-of-squares solutions
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-02-09T00:00:00+00:00">February 09, 2011</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">A question on the YALMIP forum essentially boiled down to how can I generate sum-of-squares solutions which really are feasible, i.e. true certificates?
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/Work-shop/" rel="permalink">Work-shop material
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2010-06-11T00:00:00+00:00">June 11, 2010</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Files and exercise material from the  YALMIP work-shop at the Swedish control conference 2010
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/Polytopic-geometry-using-YALMIP-and-MPT/" rel="permalink">Polytopic geometry using YALMIP and MPT
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2010-06-11T00:00:00+00:00">June 11, 2010</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Ever wondered how to compute the L1 Chebyshev ball?
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/taggingconstraints/" rel="permalink">Tagging constraints
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2009-08-29T00:00:00+00:00">August 29, 2009</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Name your constraints for easy reference
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/naninmodel/" rel="permalink">NaN in model
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2009-08-29T00:00:00+00:00">August 29, 2009</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Where why how?
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/multiplesolutions/" rel="permalink">Computing multiple solutions in one shot
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2009-08-29T00:00:00+00:00">August 29, 2009</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Avoid that for-loop by using vector objectives
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/fixedconstraints/" rel="permalink">Constraints without any variables
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2009-08-29T00:00:00+00:00">August 29, 2009</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Code works for almost all cases, but suddenly fails.
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/New-sum-of-squares-example/" rel="permalink">New sum-of-squares example
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2009-08-29T00:00:00+00:00">August 29, 2009</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">Added a sum-of-squares example focusing on pre- and post-processing capabilities.
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+ <h2 class="archive__item-title" itemprop="headline">    
+      
+        <a href="https://yalmip.github.io/squareroots/" rel="permalink">Working with square roots
+</a>
+      
+    </h2>
+    <footer class="page__meta"><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2009-08-29T00:00:00+00:00">August 29, 2009</time></p></footer>
+    
+    <p class="archive__item-excerpt" itemprop="description">sqrt, sqrtm, power or cpower?
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+<nav class="pagination">
+  <ul>
+    
+    
+      <li><a href="#" class="disabled"><span aria-hidden="true">Previous</span></a></li>
+    
+
+    
+    
+      <li><a href="#" class="disabled current">1</a></li>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+        
+        
+        
+        <li><a href="https://yalmip.github.io/page2/">2</a></li>
+      
+    
+      
+        
+        
+        
+        <li><a href="https://yalmip.github.io/page3/">3</a></li>
+      
+    
+
+    
+    
+      <li><a href="#" class="disabled">&hellip;</a></li>
+    
+
+    
+      <li><a href="https://yalmip.github.io/page7/">7</a></li>
+    
+
+    
+    
+      <li><a href="https://yalmip.github.io/page2/">Next</a></li>
+    
+  </ul>
+</nav>
+ -->
+
+  </div>
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    <li><a href="https://yalmip.github.io/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2019 Johan Löfberg. Powered by <a href="http://jekyllrb.com/" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="./YALMIP_files/main.min.js"></script>
+
+
+
+
+
+
+
+  
+
+</body></html>

@@ -1,0 +1,43 @@
+---
+title: "Decision-making in changing environments"
+excerpt: "Regret minimization in the face of non-stationarities <br/><img src='/images/nonstationary.png' >"
+collection: portfolio
+entries_layout: grid
+portfolio_order: 2024.1
+---
+
+<figure>
+<img src="/images/nonstationary.png" alt="EV FSM">
+<figcaption> The flow of information is depicted for our set-up. It is similar to multi-arm bandits but we consider settings where 
+    the reward for actions not played are revealed in addition to the rewards for the actions that were played.</figcaption>
+</figure>
+<p>
+    How do we learn in environments that are constantly changing? If my opponent in rock paper scissors is 
+    constantly learning and adapting to my strategy, what's the best thing I can do? Similarly, if I'm trying to
+    classify malware or spam emails, but the attackers are constantly adapting their strategies, how can I learn to 
+    classify them effectively?
+</p>
+<b>
+Abstract:
+</b>
+<p>
+We consider a repeated decision-making setting in which the decision maker has access to contex-
+tual information and lacks a model or a priori knowledge of the relationship between the actions,
+context, and costs that they aim to minimize. Moreover, we assume that the environment may be
+non-stationary due to the presence of other agents that may be reacting to our decisions. We propose
+an algorithm inspired by log-linear learning that uses Boltzmann distributions to generate stochastic
+policies. We consider two general notions of context and provide regret bounds for each: 1) a finite
+number of possible measurements and 2) a continuum of measurements that weight a set of finite
+classes. In the non-stationary setting, we incur some regret but can make it arbitrarily small. We
+illustrate the operation of the algorithm through two examples: one that uses synthetic data (based
+on the rock-paper-scissors game) and another that uses real data for malware classification. Both
+examples exhibit (by construction or naturally) significant lack of stationarity.
+Keywords: no regret dynamics, non-stationary learning, adversarial learning, contextual informa-
+tion, multiplicative weights update
+</p>
+
+<p>
+    See the paper on <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xusfwfAAAAAJ&authuser=1&citation_for_view=xusfwfAAAAAJ:zYLM7Y9cAGgC">Google Scholar.</a>
+</p>
+
+

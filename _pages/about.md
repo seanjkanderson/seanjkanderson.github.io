@@ -8,29 +8,8 @@ redirect_from:
 header:
     overlay_image: WS-3.jpg
     overlay_filter: 0.2
-    caption: South Yuba River © Sean Anderson
+    caption: 
 ---
-How do I pass the time?
-------
-I graduated with a B.S. in energy engineering from U.C. Berkeley. I got my M.S. in Electrical and Computer Engineering with an emphasis in controls and machine learning at U.C. Santa Barbara. Now I'm working on a PhD in controls and optimization.
+Hi, welcome to this site that shares a bit of my professional portfolio and experience. My name is Sean Anderson, and my expertise is in controls engineering and machine learning for the purposes of decision making. I completed my Ph.D. in 2025 under the guidance of [Professor João Hespanha](https://web.ece.ucsb.edu/~hespanha/) at UC Santa Barbara in Electrical and Computer Engineering. Prior to this I completed by M.S. in Electrical and Computer Engineering at UCSB in 2022. Before graduate school I worked at [New Sun Road, P.B.C.](https://newsunroad.com) on controls, data science, and software engineering, for the purposes of enabling the optimal dispatch and control of energy assets in microgrids in remote developing communities. My undergraduate studies were in energy engineering at UC Berkeley from 2014-2018.
 
-![picture alt](/images/wonder_valley.jpg)
-
-Growing up...
-------
-I hail from the small town of Nevada City, California, in the foothills of the Sierra Nevada. There, I learned to love 
-the natural world, understand how humans change the face of the planet, and explore the unknown. 
-
-...still growing up
-------
-I finished my B.S. in May 2018. The day after graduation I went on a bikepacking trip in China. When I got back I lived on the road in the western United States 
-for a few months. I like to nerd out and play big in the outdoors. I worked at a startup, New Sun Road, for two years working on datascience, controls, and software engineering. Now I'm back in school, dreaming of big expeditions.
-
-Reading
-------
-__Memorable books__:
-* The Black Swan - Nassim Nicholas Taleb
-* The Mysterious Island - Jules Verne
-* Silent Spring - Rachel Carson
-* The Monkey Wrench Gang - Edward Abbey
-* Beyond the Mountain - Steve House
+My research primarily focuses on the efficient collection and use of data for control, game theory, and online decision-making. These problems consider data-driven methods and address the importance of quality data. In other words, you may have a very large set of data to train your models on/make decisions from, but if the dataset has very little information in it, then the resulting performance will be poor. Conversely, you could collect a relatively small dataset with very informative datapoints. The benefits of this depend on the context but can lead to better decision making performance than a larger dataset, faster model training, and/or lower experimental costs for collecting the data. 

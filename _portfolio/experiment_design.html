@@ -1,0 +1,29 @@
+---
+title: "Experiment design for reducing uncertainty where it matters most"
+excerpt: "Stochastic optimization approach to task-oriented experiment design <br/><img src='/images/gp_exp_des.png' >"
+collection: portfolio
+entries_layout: grid
+portfolio_order: 2023.1
+---
+<figure>
+<img src="/images/racecar.png" alt="racecar">
+<figcaption></figcaption>
+</figure>
+
+<p>
+    If you show up to a car racing track, and you have one test lap before the race, how do you use that test lap to learn information
+about the car's performance on the track that will most benefit your race performance? Data in many applications is expensive to collect,
+and we address how to collect data that reduces uncertainty in areas that most benefit subsequent performance (e.g. reduce costs the most, 
+lead to fastest car racing times, etc).
+</p>
+<p>
+We first look at this when using a Gaussian process regressor to model the latent dynamics of the system. This is a non-parametric approach
+that includes uncertainty estimates in the prediction. For a chance-constrained optimization control objective, we then aim to reduce uncertainty in 
+areas that most affect the control objective (i.e. where the uncertainty actually affects the performance of the system). This paper is available
+on <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xusfwfAAAAAJ&sortby=pubdate&authuser=1&citation_for_view=xusfwfAAAAAJ:2osOgNQ5qMEC">Google Scholar</a>.
+</p>
+
+<p>
+Then we look at a parametric approach to modeling the system dynamics. We consider the problem of designing experiments to reduce uncertainty in the parameters of the model that most
+affect the control objective. This paper is available on <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xusfwfAAAAAJ&sortby=pubdate&authuser=1&citation_for_view=xusfwfAAAAAJ:qjMakFHDy7sC">Google Scholar</a>.
+</p>

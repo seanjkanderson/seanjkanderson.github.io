@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Sean J.K. Anderson"
+title                    : "Sean Anderson"
 title_separator          : "-"
 name                     : &name "Sean Anderson"
 description              : &description "How do we make decisions?"
@@ -82,11 +82,11 @@ analytics:
 author:
   name             : "Sean Anderson"
   avatar           : "profile.png"
-  bio              : "Passionate learner. Controls engineer."
-  location         : "Berkeley, CA"
+  bio              : "Passionate learner. Controls and machine learning engineer."
+  location         : "Santa Barbara, CA"
   employer         :
-  # googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            : sean.anderson@berkeley.edu
+  googlescholar    : "https://scholar.google.com/citations?user=xusfwfAAAAAJ&hl=en&authuser=1"
+  email            : seananderson@ucsb.edu
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -100,7 +100,7 @@ author:
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : seanandersonenergy
+  linkedin         : seanjkanderson
   # orcid            : "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :

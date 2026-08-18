@@ -1,0 +1,17 @@
+---
+title: "Learning car dynamics from repeated tasks"
+excerpt: "Stochastic Model Predictive Control with Gaussian Process regression for learning dynamics <br/><img src='/images/uncertainty.jpg' >"
+collection: portfolio
+entries_layout: grid
+portfolio_order: 2020.1
+---
+
+<p>
+I reproduced the numerical results from <a href="https://arxiv.org/abs/1705.10702">"Cautious Model Predictive Control using Gaussian Process Regression
+"</a> We start with an initial physics-based kinematic bicycle model with Pacejka tire model for friction. Due to modeling limitations/error, we then learn the predictive
+error of the model using Gaussian process regression. This regressor not only produces an expected value, but also uncertainty quantification in the form of a variance 
+estimate. The model predictive control uses chance-constraints to act on this uncertainty quantification. The resulting controller written in FORCES PRO solves on the order of
+ milliseconds but decreases in speed as the size of the training dataset increases, a known shortcoming of this regressor.
+
+These results motivated my work in experiment design for collecting the most useful data.
+</p>
